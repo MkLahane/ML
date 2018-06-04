@@ -23,7 +23,7 @@ function setup() {
   for (let i = 0; i < coefficients.length; i++) {
     coefficients[i] = tf.variable(tf.scalar(random(1)));
   }
-  info = createP(' Use up and down arrow or W or S to increase and decrease the degree of polynomial.');
+  info = createP(' Use up and down arrow or W or S to increase and decrease the degree of polynomial \n and press spacebar to clear the data');
   degreeOfPolynomialP = createP('');
 
   init();
@@ -90,7 +90,10 @@ function keyPressed() {
       n--;
     }
     init()
-  }
+  } else if (key == ' ') {
+    x_Arr = [];
+    y_Arr = [];
+  } 
 
 }
 
