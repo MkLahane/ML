@@ -4,6 +4,7 @@ const learningRate = 0.1;
 let optimizer; //= tf.train.sgd(learningRate);
 let n = 1;
 let coefficients = new Array(100);
+let info;
 let dragging = false;
 let degreeOfPolynomialP;
 
@@ -22,6 +23,7 @@ function setup() {
   for (let i = 0; i < coefficients.length; i++) {
     coefficients[i] = tf.variable(tf.scalar(random(1)));
   }
+  info = createP(' Use up and down arrow or W or S to increase and decrease the degree of polynomial.');
   degreeOfPolynomialP = createP('');
 
   init();
