@@ -4,8 +4,8 @@ let classifier;
 let class2B;
 let class1B;
 let trainB;
-let userLabel1;
-let userLabel2;
+let userLabel1 = "A";
+let userLabel2 = "B";
 //transfer learning example
 
 //shiffman live:
@@ -39,7 +39,7 @@ function setup() {
   noCanvas();
 
   // Create a camera input
-  createCanvas(300, 300);
+  createCanvas(600, 600);
   video = createCapture(VIDEO);
   video.hide();
   classDisplay = createP('');
@@ -94,7 +94,7 @@ function gotResults(err, result) {
 
 function draw() {
   background(0);
-  image(video, 0, 0, 300, 300);
+  image(video, 0, 0, 600, 600);
 
 }
 
