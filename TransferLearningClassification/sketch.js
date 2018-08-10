@@ -14,8 +14,8 @@ let predictionInfo = "Prediction:";
 
 
 function setup() {
-  rX = windowWidth;
-  rY = windowHeight - 250;
+  rX = windowWidth - 200;
+  rY = windowHeight - 150;
   speech = new p5.Speech();
   createCanvas(rX, rY);
   video = createCapture(VIDEO);
